@@ -1,0 +1,29 @@
+<div class="grid-center-middle height-100">
+        <div class="col">
+            <img  src="http://chromeye.com/iv/chromeye/wp/wp-content/uploads/2017/10/Chromeye_Logo.svg" class="chromeye-logo animated fadeInDown"/>
+            <div class="animated fadeInUp">
+                <form (ngSubmit)="register()" [formGroup]="registerForm" novalidate>
+                    <div>
+                        <mat-form-field>
+                            <input matInput placeholder="Name" formControlName="name">
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field>
+                            <input matInput placeholder="Email" formControlName="email">
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field>
+                            <input matInput placeholder="Password" formControlName="password">
+                        </mat-form-field>
+                    </div>
+                    <div class="buttons-wrapper">
+                        <button mat-raised-button color="primary" type="submit">Register</button>
+                        <button mat-raised-button routerLink="/login">Login</button>
+                    </div>
+                    <p class="error-text">{{err}}</p>
+                </form>
+            </div>
+        </div>
+    </div>

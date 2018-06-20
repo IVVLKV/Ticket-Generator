@@ -1,0 +1,16 @@
+<mat-list>
+    <mat-form-field class="filter">
+        <input matInput (keyup)='onKeyUp($event.target.value)' placeholder="Filter Clients...">
+    </mat-form-field>
+    <div class="overflow">
+        <mat-list-item 
+        *ngFor="let client of fileredClients|async"
+        [routerLinkActive]="'active'"
+        [routerLink]="['/home/generator', client.abbr]">
+            <mat-icon mat-list-icon>business</mat-icon>
+            <h4 mat-line>{{client.name}}</h4>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </div>
+</mat-list>
+<button mat-raised-button color="primary" (click)="openDialog()">Add Client</button>

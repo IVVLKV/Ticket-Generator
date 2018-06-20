@@ -1,0 +1,59 @@
+<div class="container">
+  <h3>{{pageTitle}}</h3>
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="number">
+      <mat-header-cell class="flex-grow2" *matHeaderCellDef mat-sort-header> Ticket </mat-header-cell>
+      <mat-cell class="flex-grow2" matTooltip="Requestor: {{row.requestor}}" matTooltipPosition="before" *matCellDef="let row"><a target="_blank" href="{{row.link}}">{{row.number}}</a></mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.status}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="deadline">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Deadline </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.deadline}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="category">
+      <mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
+      <mat-cell  *matCellDef="let row"> <mat-icon *ngIf="row.category" matTooltip="Category: {{row.category}}" matTooltipPosition="above">library_books</mat-icon> </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="dev">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Dev </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.dev}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="qa">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> QA </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.qa}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="priority">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Priority </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.priority}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="designer">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Design </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.designer}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="files">
+      <mat-header-cell *matHeaderCellDef> Resources </mat-header-cell>
+      <mat-cell *matCellDef="let row"> <a *ngIf="row.files" href="{{row.files}}" target="_blank"><mat-icon class="download-icon" mat-list-icon>file_download</mat-icon></a> </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="notes">
+      <mat-header-cell *matHeaderCellDef> Notes </mat-header-cell>
+        <mat-cell  *matCellDef="let row"> <mat-icon *ngIf="row.notes" matTooltip="Notes: {{row.notes}}" matTooltipPosition="above">flash_on</mat-icon> <mat-icon class="edit-icon" (click)="editTicket(row._id)" mat-list-icon>mode_edit</mat-icon></mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row attr.dev="{{row.dev}}" *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+  </mat-table>
+</div>

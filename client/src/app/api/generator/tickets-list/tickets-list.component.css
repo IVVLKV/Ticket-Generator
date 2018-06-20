@@ -1,0 +1,39 @@
+.active {
+    background: #37474f;
+}
+.active .mat-cell {
+    color: #eee;
+}
+.mat-row {
+    outline: none;
+    position: relative;
+}
+.delete {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.tickets {
+    padding-top: 8px;
+}
+.overflow {
+    height: calc(100vh - 210px);
+    overflow-y: scroll;
+    border-bottom: 1px solid #e0e0e0;
+}
+button {
+    margin-top: 10px;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: #eee;
+}
+::-webkit-scrollbar-thumb {
+    background: #37474f; 
+    border-radius: 3px;
+}

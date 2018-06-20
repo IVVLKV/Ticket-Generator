@@ -1,0 +1,17 @@
+form {
+    max-width: 260px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.chromeye-logo {
+    width: 100%;
+    max-width: 240px;
+    display: block;
+    margin: 20px auto;
+}
+.buttons-wrapper {
+    text-align: center;
+}
+.height-100 {
+    min-height: calc(100vh - 16px);
+}

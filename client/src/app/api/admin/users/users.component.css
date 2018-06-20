@@ -1,0 +1,24 @@
+.users {
+    font-family: consolas;
+    margin-bottom: 10px;
+}
+.role {
+    font-weight: bold;
+}
+.user.admin {
+    background: #3f51b5;
+    color: #fff;
+}
+.user.pm {
+    background: #2e7d32;
+    color: #fff;
+}
+.user {
+    background: #a5d6a7;
+    border-bottom: 1px solid #eeeeee;
+    cursor: pointer;
+    outline: none;
+}
+mat-card-content {
+    margin: 0;
+}

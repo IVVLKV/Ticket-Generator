@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import "https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.1/gridlex.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+/* Material overwrite */
+.mat-form-field {
+    width: 100%;
+}
+/* Material overwrite */
+[class*=grid-], [class*=grid_], [class~=grid] {
+    margin: 0;
+}
+body {
+    margin: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+.error-text {
+    color: red;
+    margin: 10px 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+.mat-snack-bar-container {
+    background: rgb(101, 194, 101) !important;
+    color: #000 !important;
+}
+.mat-simple-snackbar {
+    justify-content: center !important;
+    font-size: 16px !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+}

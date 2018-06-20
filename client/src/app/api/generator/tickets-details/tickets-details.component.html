@@ -1,0 +1,18 @@
+<div class="ticket-details" *ngIf="ticket">
+    <div>
+        <mat-card>
+            <mat-form-field>
+                <input readonly matInput placeholder="Ticket number:" #ticketNumber [value]="ticket.number">
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="openSnackBar('Ticket NUMBER')" [ngxClipboard]="ticketNumber">Copy</button>
+        </mat-card>
+    </div>
+    <div>
+        <mat-card>
+            <mat-form-field>
+                <input readonly matInput placeholder="Ticket name:" #ticketName [value]="ticket.name">
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="openSnackBar('Ticket NAME')" [ngxClipboard]="ticketName">Copy</button>
+        </mat-card>
+    </div>
+</div>

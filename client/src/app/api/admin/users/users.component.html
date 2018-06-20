@@ -1,0 +1,6 @@
+<mat-card class="users">
+    <mat-card-content *ngFor="let user of usersList">
+        <div class="user {{user.role}}" [routerLink]="['../edit' ,user._id]"><button mat-icon-button><mat-icon>edit</mat-icon></button> {{user.email}} - <span class="role">{{user.role}}</span></div>
+    </mat-card-content>
+</mat-card>
+<button mat-raised-button color="primary" (click)="openDialog()">Add User</button>

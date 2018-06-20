@@ -1,0 +1,30 @@
+.client-item.clicked {
+    background: #1e1e1e;
+    color: #fafafa;
+}
+.active {
+    background: #37474f;
+    color: #eee;
+}
+.mat-list-item {
+    outline: none;
+}
+.overflow {
+    height: calc(100vh - 210px);
+    overflow-y: scroll;
+    border-bottom: 1px solid #e0e0e0;
+}
+button {
+    margin-top: 10px;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: #eee;
+}
+::-webkit-scrollbar-thumb {
+    background: #37474f; 
+    border-radius: 3px;
+}
